@@ -1,0 +1,12 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= f.text_field :title, placeholder: Tingui::Post.human_attribute_name(:title) %>
+  <%= f.text_area :content, placeholder: Tingui::Post.human_attribute_name(:content) %>
+  <%= f.submit t('buttons.save') %>
+<% end %>
