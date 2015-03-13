@@ -1,23 +1,14 @@
-<nav>
-  <ul>
-    <li><%= link_to t('posts.new'), new_post_path %></li>
-  </ul>
-</nav>
-
-
-
 <header class="navigation" role="banner">
   <div class="navigation-wrapper">
-    <a href="javascript:void(0)" class="logo">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
-    </a>
+    <div class="navigation-logo">
+      <a href="javascript:void(0)">
+        #tingui logo 
+      </a>
+  </div>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
-        <li class="nav-link more"><a href="javascript:void(0)">More</a>
+        <li class="nav-link more"><a href="javascript:void(0)"><%= link_to t('posts.new'), new_post_path %></a>
           <ul class="submenu">
             <li><a href="javascript:void(0)">Submenu Item</a></li>
             <li><a href="javascript:void(0)">Another Item</a></li>
@@ -35,6 +26,7 @@
             </li>
           </ul>
         </li>
+        <li class="nav-link"><a href="javascript:void(0)"># SOME ITEM</a></li>
       </ul>
     </nav>
     <div class="navigation-tools">

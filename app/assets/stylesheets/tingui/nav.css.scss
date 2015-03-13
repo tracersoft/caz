@@ -1,19 +1,23 @@
-
 header.navigation {
+  position:fixed;
+  left:0px;
+  top:0px;
+  height:30px;
+  width:100%;
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
-  
+
   a {
     text-decoration: none;
   }
   //////////////////////////////////////////////////////////////////////////////////
 
   $navigation-padding: 1em;
-  $navigation-background: $dark-gray;
+  $navigation-background:desaturate(darken($base-accent-color, 20%), 30%);
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 60px;
@@ -35,20 +39,18 @@ header.navigation {
 
   .navigation-wrapper {
     @include clearfix;
-    @include outer-container;
     position: relative;
     z-index: 9999;
   }
 
-  .logo {
+  .navigation-logo {
     float: left;
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
     padding-right: 2em;
+    width: 10%;
 
     img {
       max-height: $navigation-height;
-      padding: 0.8em 0;
     }
   }
 
@@ -290,64 +292,4 @@ header.navigation {
     text-transform: uppercase;
   }
 
-  // Search bar
-
-  .search-bar {
-    $search-bar-border-color: $base-border-color;
-    $search-bar-border: 1px solid $search-bar-border-color;
-    $search-bar-background: lighten($search-bar-border-color, 10%);
-
-    float: left;
-    padding: 0.85em 0.6em 0.7em 0.6em;
-    width: 60%;
-
-    form {
-      position: relative;
-
-      input[type=search] {
-        @include box-sizing(border-box);
-        background: $navigation-search-background;
-        border-radius: $base-border-radius * 2;
-        border: $navigation-search-border;
-        color: $navigation-color;
-        font-size: 0.9em;
-        font-style: italic;
-        margin: 0;
-        padding: 0.5em 0.8em;
-        width: 100%;
-
-        @include media($large-screen) {
-          width: 100%;
-        }
-      }
-
-      button[type=submit] {
-        @include button(flat, $navigation-search-background);
-        bottom: 0.3em;
-        left: auto;
-        outline: none;
-        padding: 0 9px;
-        position: absolute;
-        right: 0.3em;
-        top: 0.3em;
-
-        img {
-          height: 12px;
-          opacity: 0.7;
-          padding: 1px;
-        }
-      }
-    }
-
-    @include media($horizontal-bar-mode) {
-      display: inline-block;
-      position: relative;
-      width: 16em;
-
-      input {
-        @include box-sizing(border-box);
-        display: block;
-      }
-    }
-  }
 }

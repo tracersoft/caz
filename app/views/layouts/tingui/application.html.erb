@@ -7,11 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render 'layouts/tingui/nav' %>
-  <% flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, class: name %>
-  <% end -%>
-  <%= yield %>
-  <%= render 'layouts/tingui/footer' %>
+  <div class="wrapper">
+    <%= render 'layouts/tingui/nav' %>
+    <section class="content">
+      <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, class: name %>
+      <% end -%>
+      <%= yield %>
+    </section>
+    <%= render 'layouts/tingui/footer' %>
+  </div>
 </body>
 </html>
