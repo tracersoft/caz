@@ -6,6 +6,10 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'capybara/rspec'
 require 'shoulda/matchers'
+require 'capybara/webkit'
+require 'factory_girl_rails'
+
+Capybara.javascript_driver = :webkit
 
 ENGINE_RAILS_ROOT=File.join(File.dirname(__FILE__), '../')
 Dir[File.join(ENGINE_RAILS_ROOT, "spec/support/**/*.rb")].each {|f| require f }
@@ -18,4 +22,6 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.include Tingui::Engine.routes.url_helpers
   config.include CommonActions
+  config.include FactoryGirl::Syntax::Methods
+  config.include JsonResponse, type: :request
 end

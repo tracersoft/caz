@@ -1,13 +1,13 @@
 module Tingui
-  class PostsController < EntriesController
+  class PagesController < EntriesController
     protected
 
     def resource_class
-      Post
+      Page
     end
 
     def collection_path
-      posts_path
+      pages_path
     end
   end
 end
