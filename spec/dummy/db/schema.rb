@@ -13,26 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20150313001856) do
 
-  create_table "tingui_categories", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.integer  "parent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "tingui_categories", ["name"], name: "index_tingui_categories_on_name"
-  add_index "tingui_categories", ["parent_id"], name: "index_tingui_categories_on_parent_id"
-
   create_table "tingui_posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
-    t.integer  "category_id"
     t.string   "publication_type", default: "post", null: false
   end
 
-  add_index "tingui_posts", ["category_id"], name: "index_tingui_posts_on_category_id"
   add_index "tingui_posts", ["publication_type"], name: "index_tingui_posts_on_publication_type"
 
 end

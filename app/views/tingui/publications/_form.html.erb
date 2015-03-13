@@ -1,7 +1,7 @@
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
+<%= form_for(@publication) do |f| %>
+  <% if @publication.errors.any? %>
     <ul>
-      <% @post.errors.full_messages.each do |msg| %>
+      <% @publication.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>
