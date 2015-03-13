@@ -1,4 +1,4 @@
-<%= form_for(@publication) do |f| %>
+<%= form_for(@publication, html: { component: 'post_form', metadata: js_metadata }) do |f| %>
   <% if @publication.errors.any? %>
     <ul>
       <% @publication.errors.full_messages.each do |msg| %>
@@ -6,7 +6,9 @@
       <% end %>
     </ul>
   <% end %>
+
   <%= f.text_field :title, placeholder: Tingui::Post.human_attribute_name(:title) %>
+  <%= f.text_field :slug, placeholder: Tingui::Post.human_attribute_name(:slug) %>
   <%= f.text_area :content, placeholder: Tingui::Post.human_attribute_name(:content) %>
   <%= f.submit t('buttons.save') %>
 <% end %>
