@@ -9,6 +9,7 @@ feature 'User creates a post' do
   scenario 'with valid inputs' do
     fill_model_field(Tingui::Post, :title, with: 'Test')
     fill_model_field(Tingui::Post, :content, with: 'Test content')
+    fill_model_field(Tingui::Post, :slug, with: 'test')
     click_save
     expect(page).to have_content(I18n.t('posts.flashes.created'))
     expect(page).to have_content(Tingui::Post.last.title)
@@ -17,5 +18,12 @@ feature 'User creates a post' do
   scenario 'with invalid inputs' do
     click_save
     expect(page).to have_content(I18n.t('errors.messages.blank'))
+  end
+
+  feature 'Auto generate post slug' do
+    scenario 'user types on title field', js: true do
+      fill_model_field(Tingui::Post, :title, with: 'T')
+      expect(find_field(Tingui::Post.human_attribute_name(:slug)).value).to eql('t')
+    end
   end
 end
