@@ -5,7 +5,7 @@ class PostForm {
   }
 
   run() {
-    this.$el.on('keyup, change', '#post_title', (e) => {
+    this.$el.on('keypress change', '#post_title', (e) => {
       this.setSlug($(e.target).val());
     });
   }
