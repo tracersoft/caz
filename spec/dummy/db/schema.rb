@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313001856) do
+ActiveRecord::Schema.define(version: 20150313164407) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20150313001856) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
-  create_table "tingui_posts", force: :cascade do |t|
+  create_table "tingui_entries", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.datetime "created_at",                        null: false
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150313001856) do
     t.string   "publication_type", default: "post", null: false
   end
 
-  add_index "tingui_posts", ["publication_type"], name: "index_tingui_posts_on_publication_type"
-  add_index "tingui_posts", ["slug"], name: "index_tingui_posts_on_slug", unique: true
+  add_index "tingui_entries", ["publication_type"], name: "index_tingui_entries_on_publication_type"
+  add_index "tingui_entries", ["slug"], name: "index_tingui_entries_on_slug", unique: true
 
 end
