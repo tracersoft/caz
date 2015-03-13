@@ -1,0 +1,22 @@
+.footer-2 {
+  $base-accent-color: #477DCA !default;
+  $footer-background: desaturate(darken($base-accent-color, 20%), 30%);
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  background: $footer-background;
+  padding: 25px 25px 35px 25px;
+
+  .footer-text{
+    color: white;
+    float: left;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+
+  .footer-logo{
+    float: right;
+  }
+}

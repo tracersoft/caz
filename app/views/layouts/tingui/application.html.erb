@@ -7,15 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-  <ul>
-    <li><%= link_to t('posts.new'), new_post_path %></li>
-  </ul>
-</nav>
-<% flash.each do |name, msg| -%>
-  <%= content_tag :div, msg, class: name %>
-<% end -%>
-<%= yield %>
-
+  <%= render 'layouts/tingui/nav' %>
+  <% flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, class: name %>
+  <% end -%>
+  <%= yield %>
+  <%= render 'layouts/tingui/footer' %>
 </body>
 </html>
