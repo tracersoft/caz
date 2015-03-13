@@ -1,5 +1,5 @@
 module Tingui
-  class PagesController < PublicationsController
+  class PagesController < EntriesController
     protected
 
     def resource_class
