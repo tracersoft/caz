@@ -1,7 +1,7 @@
-<%= form_for(@post, html: { component: 'post_form', metadata: js_metadata }) do |f| %>
-  <% if @post.errors.any? %>
+<%= form_for(@entry, html: { component: 'post_form', metadata: js_metadata }) do |f| %>
+  <% if @entry.errors.any? %>
     <ul>
-      <% @post.errors.full_messages.each do |msg| %>
+      <% @entry.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
     </ul>
