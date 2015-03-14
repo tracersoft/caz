@@ -4,6 +4,11 @@ en:
     all: 'All posts'
     flashes:
       created: Post created with success!
+  pages:
+    new: 'New page'
+    all: 'All pages'
+    flashes:
+      created: Page created with success!
   buttons:
     save: Save
   activerecord:
