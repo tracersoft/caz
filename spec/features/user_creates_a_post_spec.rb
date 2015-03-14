@@ -22,8 +22,8 @@ feature 'User creates a post' do
 
   feature 'Auto generate post slug' do
     scenario 'user types on title field', js: true do
-      fill_model_field(Tingui::Post, :title, with: 'T')
-      expect(page).to have_field(Tingui::Post.human_attribute_name(:slug), with: 't')
+      fill_model_field(Tingui::Post, :title, with: 'Slug')
+      expect(page).to have_field(Tingui::Post.human_attribute_name(:slug), with: "slug")
     end
   end
 end
