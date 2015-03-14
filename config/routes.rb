@@ -5,4 +5,5 @@ Tingui::Engine.routes.draw do
   resources :post_slugs, only: [:create]
 
   resources :pages, only: [:new, :create, :index]
+  resources :categories
 end

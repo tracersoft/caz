@@ -26,15 +26,27 @@ ActiveRecord::Schema.define(version: 20150313165836) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
+  create_table "tingui_categories", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.integer  "parent_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tingui_categories", ["name"], name: "index_tingui_categories_on_name"
+  add_index "tingui_categories", ["parent_id"], name: "index_tingui_categories_on_parent_id"
+
   create_table "tingui_entries", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "slug"
-    t.string   "type",       default: "post", null: false
+    t.integer  "category_id"
+    t.string   "type",        default: "post", null: false
   end
 
+  add_index "tingui_entries", ["category_id"], name: "index_tingui_entries_on_category_id"
   add_index "tingui_entries", ["slug"], name: "index_tingui_entries_on_slug", unique: true
   add_index "tingui_entries", ["type"], name: "index_tingui_entries_on_type"
 
