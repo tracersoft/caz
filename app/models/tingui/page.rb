@@ -1,4 +1,4 @@
 module Tingui
-  class Post < Entry
+  class Page < Entry
   end
 end
