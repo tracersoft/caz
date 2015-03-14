@@ -1,6 +1,7 @@
 en:
   posts:
     new: 'New post'
+    all: 'All posts'
     flashes:
       created: Post created with success!
   buttons:
