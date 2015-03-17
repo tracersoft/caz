@@ -1,14 +1,11 @@
 en:
-  posts:
-    new: 'New post'
-    flashes:
-      created: Post created with success!
-  categories:
-    new: 'New Category'
-    flashes:
-      created: Category created with success!
+  flashes:
+    created: "%{model} created with success!"
+    updated: "%{model} updated with success!"
+    destroyed: "%{model} destroyed with success!"
   buttons:
     save: Save
+    new: "New %{model}"
   activerecord:
     models:
       post: Post
