@@ -7,7 +7,7 @@ module CommonActions
     fill_in(model.human_attribute_name(field), options)
   end
 
-  def click_i18n(id)
-    click_on(I18n.t(id))
+  def click_i18n(id, vars={})
+    click_on(I18n.t(id, vars))
   end
 end
