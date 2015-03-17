@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Caz::Engine => "/tingui"
+  mount Caz::Engine => "/caz"
 end

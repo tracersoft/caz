@@ -5,7 +5,7 @@ require "caz/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "tingui"
+  s.name        = "caz"
   s.version     = Caz::VERSION
   s.authors     = ["Jaimerson Araújo", "Marcelo Piva", "Ronaldo Teruia"]
   s.email       = ["jaimersonaraujo@gmail.com"]

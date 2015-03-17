@@ -1,4 +1,4 @@
-require_dependency "tingui/application_controller"
+require_dependency "caz/application_controller"
 
 module Caz
   class CategoriesController < ApplicationController

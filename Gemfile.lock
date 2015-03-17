@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tingui (0.0.1)
+    caz (0.0.1)
       friendly_id (~> 5.1.0)
       jquery-rails (~> 3.1.2)
       rails (~> 4.2.0)
@@ -177,6 +177,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  caz!
   database_cleaner
   factory_girl_rails
   jasmine
@@ -185,4 +186,3 @@ DEPENDENCIES
   rspec-rails
   shoulda-matchers
   sqlite3
-  tingui!

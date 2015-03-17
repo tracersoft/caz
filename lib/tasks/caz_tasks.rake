@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :tingui do
+# task :caz do
 #   # Task goes here
 # end
