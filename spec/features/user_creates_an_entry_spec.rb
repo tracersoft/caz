@@ -25,7 +25,7 @@ feature 'User creates an entry' do
 
       feature 'Auto generate post slug' do
         scenario 'user types on title field', :js, :slow do
-          pending 'Ajax test is unpredictable'
+          skip  'Ajax test is unpredictable'
           fill_model_field(klass, :title, with: 'Slug')
           expect(page).to have_field(klass.human_attribute_name(:slug), with: "slug")
         end
