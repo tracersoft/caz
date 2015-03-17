@@ -1,3 +1,7 @@
-= Caz
+= Caz or Cazalberto Management System
 
-This project rocks and uses MIT-LICENSE.
+## Getting Started
+
+```ruby
+gem "caz"
+```
