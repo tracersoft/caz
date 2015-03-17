@@ -8,4 +8,4 @@ gem "caz"
 
 ### Contributing
 
-![Contribua](https://s3.amazonaws.com/random.tracersoft.com.br/image.jpgg)
+![Contribua](https://s3.amazonaws.com/random.tracersoft.com.br/image.jpg)
