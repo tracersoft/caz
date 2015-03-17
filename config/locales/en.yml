@@ -3,13 +3,20 @@ en:
     new: 'New post'
     flashes:
       created: Post created with success!
+  categories:
+    new: 'New Category'
+    flashes:
+      created: Category created with success!
   buttons:
     save: Save
   activerecord:
     models:
       post: Post
+      category: Category
     attributes:
       post:
         title: Title
         content: Content
+      category:
+        name: Name
 
