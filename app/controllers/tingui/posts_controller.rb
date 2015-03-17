@@ -1,4 +1,4 @@
-module Tingui
+module Caz
   class PostsController < EntriesController
     protected
 

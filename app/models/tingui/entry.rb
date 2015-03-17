@@ -1,4 +1,4 @@
-module Tingui
+module Caz
   class Entry < ActiveRecord::Base
     validates_presence_of :title, :slug
     validates_uniqueness_of :slug
@@ -9,7 +9,7 @@ module Tingui
     belongs_to :category
 
     def self.types
-      %w(Tingui::Post Tingui::Page)
+      %w(Caz::Post Caz::Page)
     end
   end
 end

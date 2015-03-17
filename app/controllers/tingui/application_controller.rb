@@ -1,4 +1,4 @@
-module Tingui
+module Caz
   class ApplicationController < ActionController::Base
     helper_method :js_metadata
 

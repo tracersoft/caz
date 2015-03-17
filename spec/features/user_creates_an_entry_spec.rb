@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'User creates an entry' do
-  Tingui::Entry.types.each do |klass_name|
+  Caz::Entry.types.each do |klass_name|
     klass = klass_name.constantize
     feature "of type #{klass}" do
       background do

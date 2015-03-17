@@ -1,4 +1,4 @@
-module Tingui
+module Caz
   class PostSlugsController < ApplicationController
     def create
       @post = Post.new(title: params[:title])

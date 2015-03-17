@@ -1,4 +1,4 @@
-module Tingui
+module Caz
   module ApplicationHelper
   end
 end

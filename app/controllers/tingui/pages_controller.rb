@@ -1,4 +1,4 @@
-module Tingui
+module Caz
   class PagesController < EntriesController
     protected
 

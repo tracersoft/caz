@@ -1,6 +1,6 @@
-module Tingui
+module Caz
   class Engine < ::Rails::Engine
-    isolate_namespace Tingui
+    isolate_namespace Caz
 
     config.generators do |g|
       g.test_framework :rspec

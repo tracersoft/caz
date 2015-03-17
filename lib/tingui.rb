@@ -1,8 +1,8 @@
-require "tingui/engine"
+require "caz/engine"
 require 'jquery-rails'
 require "friendly_id"
 require 'sprockets/es6'
 require 'jasmine'
 
-module Tingui
+module Caz
 end

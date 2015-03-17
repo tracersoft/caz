@@ -1,6 +1,6 @@
 require_dependency "tingui/application_controller"
 
-module Tingui
+module Caz
   class CategoriesController < ApplicationController
     before_action :set_category, only: [:show, :edit, :update, :destroy]
 

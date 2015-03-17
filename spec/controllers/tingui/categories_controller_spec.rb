@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-module Tingui
+module Caz
   RSpec.describe CategoriesController, type: :controller do
-    routes { Tingui::Engine.routes }
+    routes { Caz::Engine.routes }
 
     let(:valid_attributes) {
       { name: 'Roupas' }

@@ -1,4 +1,4 @@
-module Tingui
+module Caz
   class EntriesController < ApplicationController
     def index
       @entries = resource_class.all

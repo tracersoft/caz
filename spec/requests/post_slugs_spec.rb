@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Tingui::PostSlugsController do
+describe Caz::PostSlugsController do
   describe 'create' do
     it 'returns a available slug' do
       post post_slugs_path, title: 'Test'

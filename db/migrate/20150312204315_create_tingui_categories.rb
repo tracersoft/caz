@@ -1,4 +1,4 @@
-class CreateTinguiCategories < ActiveRecord::Migration
+class CreateCazCategories < ActiveRecord::Migration
   def change
     create_table :tingui_categories do |t|
       t.string :name, null: false

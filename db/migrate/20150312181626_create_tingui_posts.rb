@@ -1,4 +1,4 @@
-class CreateTinguiPosts < ActiveRecord::Migration
+class CreateCazPosts < ActiveRecord::Migration
   def change
     create_table :tingui_posts do |t|
       t.string :title

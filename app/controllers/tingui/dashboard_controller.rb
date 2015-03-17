@@ -1,4 +1,4 @@
-class Tingui::DashboardController < Tingui::ApplicationController
+class Caz::DashboardController < Caz::ApplicationController
   def index
   end
 end

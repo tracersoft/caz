@@ -1,4 +1,4 @@
-module Tingui
+module Caz
   class Page < Entry
   end
 end

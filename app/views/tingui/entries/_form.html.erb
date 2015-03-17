@@ -7,8 +7,8 @@
     </ul>
   <% end %>
 
-  <%= f.text_field :title, placeholder: Tingui::Entry.human_attribute_name(:title), class: 'title' %>
-  <%= f.text_field :slug, placeholder: Tingui::Entry.human_attribute_name(:slug), class: 'slug' %>
-  <%= f.text_area :content, placeholder: Tingui::Entry.human_attribute_name(:content) %>
+  <%= f.text_field :title, placeholder: Caz::Entry.human_attribute_name(:title), class: 'title' %>
+  <%= f.text_field :slug, placeholder: Caz::Entry.human_attribute_name(:slug), class: 'slug' %>
+  <%= f.text_area :content, placeholder: Caz::Entry.human_attribute_name(:content) %>
   <%= f.submit t('buttons.save') %>
 <% end %>
