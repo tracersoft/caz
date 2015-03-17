@@ -13,9 +13,13 @@
     float: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
+    margin-top: 5px;
   }
 
   .footer-logo{
     float: right;
+    img {
+      height: 14px;
+    }
   }
 }
