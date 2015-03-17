@@ -1,18 +1,18 @@
 class PostForm {
   constructor(el, metadata) {
-    this.el = el;
+    this.$el = $(el);
     this.metadata = metadata;
   }
 
   run() {
-    $('#post_title').keyup((e) => {
+    this.$el.on('keypress change', '#post_title', (e) => {
       this.setSlug($(e.target).val());
     });
   }
 
   setSlug(title) {
     $.post(this.metadata.post_slugs_path, { title: title }, (res) => {
-      $('#post_slug').val(res.slug);
+      this.$el.find('#post_slug').val(res.slug);
     });
   }
 }
