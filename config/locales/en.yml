@@ -6,6 +6,7 @@ en:
   buttons:
     save: Save
     new: "New %{model}"
+    all: "All %{model}"
   activerecord:
     models:
       post: Post
