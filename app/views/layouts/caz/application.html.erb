@@ -8,14 +8,14 @@
 </head>
 <body>
   <div class="wrapper">
-    <%= render 'layouts/tingui/nav' %>
+    <%= render 'layouts/caz/nav' %>
     <section class="content">
       <% flash.each do |name, msg| -%>
         <%= content_tag :div, msg, class: name %>
       <% end -%>
       <%= yield %>
     </section>
-    <%= render 'layouts/tingui/footer' %>
+    <%= render 'layouts/caz/footer' %>
   </div>
 </body>
 </html>
