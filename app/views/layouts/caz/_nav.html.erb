@@ -1,0 +1,24 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <div class="navigation-logo">
+      <a href="javascript:void(0)">
+        <h2>Caz</h2> 
+      </a>
+  </div>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <% [Caz::Post, Caz::Page, Caz::Category].each do |model| %>
+          <li class="nav-link more">
+            <a href="javascript:void(0)"><%= model.model_name.human.pluralize %></a>
+            <ul class="submenu">
+              <li><%= new_link_for(model) %></li>
+              <li class="divider"></li>
+              <li><%= all_link_for(model) %></li>
+            </ul>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

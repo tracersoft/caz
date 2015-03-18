@@ -18,6 +18,10 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 4.2.0"
+  s.add_dependency "bourbon"
+  s.add_dependency "neat"
+  s.add_dependency "bitters"
+  s.add_dependency "sass-rails"
   s.add_dependency "friendly_id", "~> 5.1.0"
   s.add_dependency "jquery-rails", "~> 3.1.2"
   s.add_dependency "sprockets-es6"
