@@ -1,0 +1,14 @@
+<%= form_for(@entry, html: { component: 'post_form', metadata: js_metadata }) do |f| %>
+  <% if @entry.errors.any? %>
+    <ul>
+      <% @entry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= f.text_field :title, placeholder: Caz::Entry.human_attribute_name(:title), class: 'title' %>
+  <%= f.text_field :slug, placeholder: Caz::Entry.human_attribute_name(:slug), class: 'slug' %>
+  <%= f.text_area :content, placeholder: Caz::Entry.human_attribute_name(:content) %>
+  <%= f.submit t('buttons.save') %>
+<% end %>
