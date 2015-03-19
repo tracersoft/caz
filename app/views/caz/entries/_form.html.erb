@@ -21,7 +21,12 @@
           <h1><%= f.label :categories %></h1>
         </div>
         <div class=grid-content>
-          <%= f.collection_check_boxes(:category_ids, @categories, :id, :name) %>
+          <%= f.collection_check_boxes(:category_ids, @categories, :id, :name) do |i| %>
+            <%= i.label do %>
+              <%= i.check_box %>
+              <%= i.object.name %>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
