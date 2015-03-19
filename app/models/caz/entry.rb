@@ -11,5 +11,9 @@ module Caz
     def self.types
       %w(Caz::Post Caz::Page)
     end
+
+    def category_names
+      categories.pluck(:name)
+    end
   end
 end

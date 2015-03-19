@@ -8,11 +8,7 @@ module Caz
     describe '#category_names' do
       it 'returns categories comma separated' do
         category_names = ['Teste', 'Categoria 1']
-        allow(entry).to receive(:categories) do
-          category_names.map do |category_name|
-            instance_double(Category, name: category_name)
-          end
-        end
+        allow(entry).to receive(:category_names) { category_names }
         expect(subject.category_names).to include(category_names.join(', '))
       end
     end
