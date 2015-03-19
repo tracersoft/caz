@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317213337) do
+ActiveRecord::Schema.define(version: 20150319154315) do
 
   create_table "caz_categories", force: :cascade do |t|
     t.string   "name",       null: false
@@ -36,6 +36,14 @@ ActiveRecord::Schema.define(version: 20150317213337) do
   add_index "caz_entries", ["category_id"], name: "index_caz_entries_on_category_id"
   add_index "caz_entries", ["slug"], name: "index_caz_entries_on_slug", unique: true
   add_index "caz_entries", ["type"], name: "index_caz_entries_on_type"
+
+  create_table "caz_entry_categories", force: :cascade do |t|
+    t.integer "entry_id"
+    t.integer "category_id"
+  end
+
+  add_index "caz_entry_categories", ["category_id"], name: "index_caz_entry_categories_on_category_id"
+  add_index "caz_entry_categories", ["entry_id"], name: "index_caz_entry_categories_on_entry_id"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false

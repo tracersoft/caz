@@ -30,31 +30,24 @@
   $grid-item-border-size: 9px;
   $grid-item-columns: 4;
   $grid-item-big-columns: 8;
-  $grid-item-color: white;
+  $grid-item-color: #040404;
   $grid-item-height: 14em;
 
   @include clearfix;
     
   .grid-item {
     @include transition (all 0.2s ease-in-out);
-    background:rgb(192,192,192); 
-    border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: ($grid-item-border-size / 2) solid $grid-items-background;
-    border-right: ($grid-item-border-size / 2) solid $grid-items-background;
-    border-top: 0;
+    background: #efefef; 
     float: left;
     overflow: hidden;
     outline: none;
-    padding-top: 1em;
+    padding-top: 0.6em;
+    margin-bottom: 4px;
     text-align: left;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 4px;
     margin: 0px;
-
-    @include media($large-screen) {
-      @include grid-item-columns($grid-item-columns);
-    }
-
+    border: 1px solid #eaeaea;
   }
 
   .grid-item img {
@@ -66,8 +59,8 @@
 
   .grid-item h1 {
       color: $grid-item-color;
-      font-size: 1.3em;
-      margin-bottom: 0.4em;
+      font-size: 1em;
+      margin-bottom: 0.5em;
     }
 
   .grid-item p {
@@ -100,7 +93,6 @@
   .grid-content {
     background: white;
     margin: auto;
-    border:rgb(192,192,192) solid 1px;
     padding: 1em;
 
     .pull-left{
