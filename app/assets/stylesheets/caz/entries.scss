@@ -1,0 +1,11 @@
+.entries {
+  @include outer-container(100%);
+
+  .main-fields {
+    @include span-columns(8);
+  }
+
+  aside {
+    @include span-columns(4);
+  }
+}

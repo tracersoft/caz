@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency "friendly_id", "~> 5.1.0"
   s.add_dependency "jquery-rails", "~> 3.1.2"
   s.add_dependency "sprockets-es6"
+  s.add_dependency "burgundy"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "pry"

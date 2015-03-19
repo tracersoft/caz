@@ -1,14 +1,29 @@
 <%= form_for(@entry, html: { component: 'post_form', metadata: js_metadata }) do |f| %>
-  <% if @entry.errors.any? %>
-    <ul>
-      <% @entry.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-  <% end %>
+  <div class="main-fields">
+    <% if @entry.errors.any? %>
+      <ul>
+        <% @entry.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
 
-  <%= f.text_field :title, placeholder: Caz::Entry.human_attribute_name(:title), class: 'title' %>
-  <%= f.text_field :slug, placeholder: Caz::Entry.human_attribute_name(:slug), class: 'slug' %>
-  <%= f.text_area :content, placeholder: Caz::Entry.human_attribute_name(:content) %>
-  <%= f.submit t('buttons.save') %>
+    <%= f.text_field :title, placeholder: Caz::Entry.human_attribute_name(:title), class: 'title' %>
+    <%= f.text_field :slug, placeholder: Caz::Entry.human_attribute_name(:slug), class: 'slug' %>
+    <%= f.text_area :content, placeholder: Caz::Entry.human_attribute_name(:content) %>
+    <%= f.submit t('buttons.save') %>
+  </div>
+  <aside>
+
+    <div class="grid-items">
+      <div class="grid-item">
+        <div class="grid-heading">
+          <h1><%= f.label :categories %></h1>
+        </div>
+        <div class=grid-content>
+          <%= f.collection_check_boxes(:category_ids, @categories, :id, :name) %>
+        </div>
+      </div>
+    </div>
+  </aside>
 <% end %>
