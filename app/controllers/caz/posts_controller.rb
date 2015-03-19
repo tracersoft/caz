@@ -5,9 +5,5 @@ module Caz
     def resource_class
       Post
     end
-    
-    def collection_path
-      posts_path
-    end
   end
 end

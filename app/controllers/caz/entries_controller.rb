@@ -1,6 +1,7 @@
 module Caz
   class EntriesController < ApplicationController
     helper_method :resource_name
+    helper_method :edit_path
     before_action :set_categories
 
     def index
@@ -23,13 +24,30 @@ module Caz
       end
     end
 
+    def update
+      @entry = resource_class.friendly.find(params[:id])
+      if @entry.update(entry_params)
+        redirect_to collection_path, notice: I18n.t('flashes.updated', model: resource_name.human)
+      else
+        render 'edit'
+      end
+    end
+
+    def edit
+      @entry = resource_class.friendly.find(params[:id])
+    end
+
     protected
     def set_categories
       @categories = Category.all
     end
 
     def collection_path
-      root_path
+      self.send("#{resource_name.route_key}_path")
+    end
+
+    def edit_path(*args)
+      self.send("edit_#{resource_name.singular_route_key}_path", *args)
     end
 
     def resource_class

@@ -9,7 +9,7 @@ describe Caz::PostSlugsController do
 
     context 'slug already exists' do
       it 'return slug with uniqid' do
-        create(:post, slug: 'test')
+        create(:caz_post, slug: 'test')
         post post_slugs_path, title: 'Test'
         expect(json['slug']).not_to eql('test')
       end
