@@ -6,7 +6,7 @@ module Caz
     subject { EntryPresenter.new(entry) }
 
     describe '#category_names' do
-      it 'returns categorias comma separated' do
+      it 'returns categories comma separated' do
         category_names = ['Teste', 'Categoria 1']
         allow(entry).to receive(:categories) do
           category_names.map do |category_name|
