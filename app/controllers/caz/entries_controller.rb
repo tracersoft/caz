@@ -26,7 +26,7 @@ module Caz
     end
 
     def update
-      @entry = resource_class.friendly.find(params[:id])
+      @entry = resource_class.friendly.find(params[:slug])
       if @entry.update(entry_params)
         redirect_to collection_path, notice: I18n.t('flashes.updated', model: resource_name.human)
       else
@@ -35,11 +35,11 @@ module Caz
     end
 
     def edit
-      @entry = resource_class.friendly.find(params[:id])
+      @entry = resource_class.friendly.find(params[:slug])
     end
 
     def destroy
-      @entry = resource_class.friendly.find(params[:id])
+      @entry = resource_class.friendly.find(params[:slug])
       @entry.destroy
       redirect_to collection_path, notice: I18n.t('flashes.destroyed', model: resource_name.human)
     end
