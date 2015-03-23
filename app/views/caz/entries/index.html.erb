@@ -6,9 +6,10 @@
   </thead>
   <tbody>
     <% @entries.each do |entry| %>
-      <tr>
+      <tr id="item-<%= entry.slug %>">
         <td><%= link_to entry.title, edit_path(id: entry.slug) %></td>
         <td><%= entry.category_names %></td>
+        <td><%= link_to 'delete', resource_path(id: entry.slug), method: :delete, class: 'delete-button' %></td>
       </tr>
     <% end %>
    </tbody>

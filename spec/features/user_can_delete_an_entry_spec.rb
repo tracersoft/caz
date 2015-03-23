@@ -12,6 +12,11 @@ feature 'User deletes an entry' do
       end
 
       scenario 'user clicks on delete link' do
+        within("#item-#{resource.slug}") do
+          find('.delete-button').click
+        end
+        expect(page).to have_content(I18n.t('flashes.destroyed', model: klass.model_name.human))
+        expect(page).not_to have_content(resource.title)
       end
     end
   end

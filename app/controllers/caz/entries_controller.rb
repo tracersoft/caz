@@ -2,6 +2,7 @@ module Caz
   class EntriesController < ApplicationController
     helper_method :resource_name
     helper_method :edit_path
+    helper_method :resource_path
     before_action :set_categories
 
     def index
@@ -37,6 +38,12 @@ module Caz
       @entry = resource_class.friendly.find(params[:id])
     end
 
+    def destroy
+      @entry = resource_class.friendly.find(params[:id])
+      @entry.destroy
+      redirect_to collection_path, notice: I18n.t('flashes.destroyed', model: resource_name.human)
+    end
+
     protected
     def set_categories
       @categories = Category.all
@@ -48,6 +55,10 @@ module Caz
 
     def edit_path(*args)
       self.send("edit_#{resource_name.singular_route_key}_path", *args)
+    end
+
+    def resource_path(*args)
+      self.send("#{resource_name.singular_route_key}_path", *args)
     end
 
     def resource_class
