@@ -9,6 +9,7 @@ en:
     all: "All %{model}"
   titles:
     add: "Add %{model}"
+    edit: "Edit %{model}"
   activerecord:
     models:
       post: Post
